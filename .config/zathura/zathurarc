@@ -1,0 +1,6 @@
+set font "JetBrains Mono 14"
+set index-active-bg "#7aacba"
+set inputbar-fg "#ffffff"
+set completion-highlight-bg "#7aacba"
+set highlight-active-color rgba(16,60,72,.66)
+set highlight-color rgba(16,60,72,.25)
