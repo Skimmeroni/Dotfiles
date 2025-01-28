@@ -1,13 +1,9 @@
-# Typical laptop setup, with wifi, brightness, battery etc, for
-# i3/Sway.
+#
+# Taken from the examples
+#
 
-# For X11/i3, you'll want to replace calls to swaymsg with i3-msg, and
-# the sway-xkb module with the xkb module.
-
-# fonts we'll be re-using here and there
+# Emoji font
 awesome: &awesome Font Awesome 6 Free:style=solid:pixelsize=16
-
-std_underline: &std_underline {underline: { size: 2, color: ff0000ff}}
 
 # This is THE bar configuration
 bar:
@@ -24,7 +20,7 @@ bar:
 
   left:
     - i3:
-        anchors: # Not used (directly) by f00bar; used here to avoid duplication
+        anchors:
           - string: &i3_common {margin: 5, on-click: "swaymsg --quiet workspace {name}"}
           - string: &default {<<: *i3_common, text: "? {name}"}
           - string: &first   {<<: *i3_common, text: 💧, font: *awesome}
@@ -32,11 +28,11 @@ bar:
           - string: &third   {<<: *i3_common, text: 🔥, font: *awesome}
           - string: &fourth  {<<: *i3_common, text: 🪶, font: *awesome}
           - focused: &focused
-              deco: {stack: [background: {color: ffa0a04c}, <<: *std_underline]}
+              deco: {stack: [background: {color: 2d5b69aa}, {underline: {size: 2, color: 56adfcff}}]}
           - invisible: &invisible {foreground: ffffff55}
           - urgent: &urgent
               foreground: 000000ff
-              deco: {stack: [background: {color: bc2b3fff}, <<: *std_underline]}
+              deco: {stack: [background: {color: 2d5b69aa}, {underline: {size: 2, color: 56adfcff}}]}
           - map: &i3_mode
               default:
                 - string:
@@ -90,7 +86,7 @@ bar:
             conditions:
               ~activated: {empty: {}}
               activated:
-                - string: {text: "{app-id}", foreground: ffa0a0ff}
+                - string: {text: "{app-id}", foreground: 56adfcff}
                 #- string: {text: ": {title}"}
   right:
     - clock:
