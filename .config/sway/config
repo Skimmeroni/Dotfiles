@@ -53,12 +53,6 @@ bindsym $mod+d exec $menu
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
-# Exit sway
-bindsym $mod+Shift+e exec swaymsg exit
-
-# Lock the screen
-bindsym $mod+Shift+m exec swaylock --color 000000 --indicator-radius 150 --font "JetBrains Mono" --font-size 42
-
 #
 # Moving around
 #

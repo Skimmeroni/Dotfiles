@@ -168,7 +168,7 @@ bar:
                       - string: {text: , font: *awesome}
                       - string: {text: , font: *awesome}
                       - string: {text: , foreground: 00ff00ff, font: *awesome}
-                - string: {text: "{capacity}% {estimate}"}
+                - string: {text: "{capacity}%"}
         content:
           map:
             conditions:
@@ -178,7 +178,7 @@ bar:
                 <<: *discharging
               state == charging:
                 - string: {text: , foreground: 00ff00ff, font: *awesome}
-                - string: {text: "{capacity}% {estimate}"}
+                - string: {text: "{capacity}%"}
               state == full:
                 - string: {text: , foreground: 00ff00ff, font: *awesome}
                 - string: {text: "{capacity}% full"}
@@ -197,6 +197,18 @@ bar:
                       - string: {text:  , foreground: 00ff00ff, font: *awesome}
                       - string: {text:  , foreground: 00ff00ff, font: *awesome}
                 - string: {text: "{capacity}%"}
+    - label:
+        content:
+          string:
+            on-click: swaymsg exit
+            text: ◀
+            font: *awesome
+    - label:
+        content:
+          string:
+            on-click: swaylock --color 000000 --indicator-radius 150 --font "JetBrains Mono" --font-size 42
+            text: 🔒
+            font: *awesome
     - label:
         content:
           string:
