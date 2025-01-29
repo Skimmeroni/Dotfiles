@@ -13,7 +13,7 @@ bar:
   margin: 12
 
   # Default font
-  font: JetBrains Mono:pixelsize=16
+  font: JetBrains Mono:style=bold:pixelsize=16
 
   foreground: ffffffff
   background: 11111100
