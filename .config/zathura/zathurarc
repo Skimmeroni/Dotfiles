@@ -4,3 +4,4 @@ set inputbar-fg "#ffffff"
 set completion-highlight-bg "#7aacba"
 set highlight-active-color rgba(16,60,72,.66)
 set highlight-color rgba(16,60,72,.25)
+set selection-clipboard clipboard
